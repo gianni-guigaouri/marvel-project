@@ -1,0 +1,592 @@
+
+body {
+    background: url('../img/4065694.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.return--link {
+    font-weight: 900;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    color: #1d2129;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.return--link:hover {
+    color:  #786fa6;
+}
+
+.body--page {
+    background-color: rgba(247, 247, 247, 0.95);
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 78vh;
+}
+
+
+nav {
+    margin: 0;
+    background: #303952;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.42) 0px 3px 10px 0px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav h1 {
+    font-family: 'Righteous', cursive;
+    color: white;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+/* CONTENT PERSONNAGES*/
+
+#content--container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    background-color:white;
+    box-shadow: rgba(0, 0, 0, 0.10) 0px 3px 10px 0px;
+    transition: all 0.3s ease;
+}
+
+.content:hover {
+    /* transform: scale(1.08); */
+    box-shadow: 0 1px 6px rgba(32,33,36,.15);
+    transform: rotate(-2deg) scale(1.03);
+}
+
+.content {
+    width : 230px;
+    margin: 1rem;
+    padding: 5px;
+    background-color: white;
+    transition: all 0.2s ease;
+    animation: show .2s ease forwards;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+
+    }
+    to   {
+        opacity: 1;
+    }
+}
+
+
+.content--title > h1 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 0.9rem;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    color: #1d2129;
+}
+
+.content--image {
+    display: flex;
+    justify-content: center;
+}
+
+.content--image img {
+    margin-top : 5px ;
+    width: 220px;
+    max-height: 220px;
+    min-height: 220px;
+}
+
+/* FORM */
+
+.form--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 3rem;
+    background-color:white;
+    box-shadow: rgba(0, 0, 0, 0.10) 0px 3px 10px 0px;
+    transition: all 0.3s ease;
+    min-height: 405px;
+}
+
+.form--container h2 {
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.8rem;
+    font-family: 'Open Sans', sans-serif;
+    color: #303952;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 490px;
+    margin: auto;
+}
+
+form > input, .input--picture {
+    width: 97%;
+    height: auto;
+    padding: 0.4rem 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border: none;
+    border-bottom: 1px solid #ced4da;
+    margin: 1.5rem 0;
+    transition: all 0.2s ease;
+}
+
+form > input:focus, .input--picture:focus {
+    outline: none;
+    border-bottom: 1.5px solid green; 
+}
+
+form > input::placeholder, .input--picture::placeholder {
+    color: #bfbfbf;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 10px;
+    margin-bottom: 3rem;
+    font-size:18px;
+    font-family: "RobotoCondensed Bold","Trebuchet MS",Helvetica,Arial,sans-serif;
+    color: white;
+    background-color: #303952;
+    border-radius: 8px;
+    border:1px solid #303952; 
+    cursor: pointer;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14),0 1px 7px 0 rgba(0,0,0,0.12),0 3px 1px -1px rgba(0,0,0,0.2);
+}
+
+button:focus {
+    outline: none;
+}
+
+.input--image--container {
+    width: 100%;
+    position: relative;
+}
+
+.input--image--container i{
+    position: absolute;
+    right: 1.5rem;
+    bottom: 2.2rem;
+    font-size: 24px;
+    color:#c2c2c2;
+}
+
+.input--file {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 2.2rem;
+    font-size: 22px;
+    color:#c2c2c2;
+}
+
+#input--helper--name, #input--helper--image {
+    margin: 0;
+    color: #b20a37;
+    font-size: 0.8rem;
+    font-family: "RobotoCondensed Bold","Trebuchet MS",Helvetica,Arial,sans-serif;
+}
+
+.label--image--block {
+    position: absolute;
+    right: 0;
+}
+
+@keyframes headshake {
+    25% {
+
+        transform: translateX(2%);
+    }
+    75% {
+        transform: translateX(2% * -1);
+    }
+}
+
+/* PAGINATION */
+
+.pagination--container {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem auto;
+    width: 100%;
+    background-color: white;
+}
+
+.pagination--nav {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    background-color: white;
+}
+
+.pagination--item {
+    margin: 15px 10px;
+}
+
+.pagination--link--container {
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.pagination--link--container--active{
+    background-color: #303952;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14),0 1px 7px 0 rgba(0,0,0,0.12),0 3px 1px -1px rgba(0,0,0,0.2);
+}
+
+.pagination--link--container--active > a {
+    color: white;
+    cursor: initial;
+}
+
+.pagination--link {
+    text-decoration: none;
+    color: rgba(57, 57, 57, 0.81);
+    font: 600 18px "RobotoCondensed Bold","Trebuchet MS",Helvetica,Arial,sans-serif;
+    align-self: center;
+    cursor: pointer;
+}
+.pagination--link > .fas {
+    font-weight: 900;
+    font-size: 30px;
+    color: #303952;
+}
+
+
+/* SKELETON */
+
+.skeleton--container {
+    margin: 1rem;
+}
+
+.skeleton--image {
+    background: rgb(243, 243, 243);
+    width: 230px;
+    height: 200px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skeleton--name {
+    background: rgb(243, 243, 243);
+    width: 230px; 
+    height: 20px;
+    margin-top: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skeleton--image, .skeleton--name {
+    animation: show 0.1s ease-in;   
+}
+
+.skeleton--name::after, .skeleton--image::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -150px;
+    top: 0;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient( 100deg, rgba(255, 255, 255, 0), 
+    rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80% );
+    animation: load 1s infinite;
+}
+
+@keyframes load {
+    from {
+        left: -150px;
+    }
+    to   {
+        left: 100%;
+    }
+}
+
+/* CONTENT PERSONNAGE PAGE*/
+
+
+.personnage--container {
+    display: flex;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.30) 0px 3px 10px 0px;
+    position: relative;
+    max-height: 470px;
+}
+
+.personnage--image {
+    width: 30%;
+}
+
+.personnage--image img {
+    width: 100%;
+    height: 100%;
+}
+
+.personnage--title {
+    width: 70%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Righteous', cursive;
+    color: #303952;
+    font-size: 2vw;
+    align-self: center;
+}
+
+.personnage--title .personnage--title--container {
+    background-color: #303952;
+    max-width: 490px;
+    margin: 1.5rem auto;
+    padding: .5rem;
+}
+
+.personnage--title h2 {
+    margin: 0;
+    color: white;
+
+}
+
+.info--items--container h3 {
+    text-transform: uppercase;
+    color: rgba(48, 57, 82, 0.6);
+    font-weight: 400;
+    font-size: 1.6vw;
+    letter-spacing: 1px;
+}
+
+.info--items--container ul {
+    max-height: 50vh;
+    overflow: auto;
+    list-style: none;
+    padding: 0;
+    font-family: "RobotoCondensed Bold","Trebuchet MS",Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.info--items--container ul::-webkit-scrollbar {
+    width: 5px;
+  }
+
+
+.info--items--container ul li {
+    margin-bottom: 0.5rem;
+    color: #1d2129;
+}
+
+.personnage--description--container {
+    max-width: 500px;
+    margin: auto;
+}
+
+.personnage--description {
+    margin: 2rem 0 2rem 0;
+    font-size:1.5vw;       
+}
+
+.personnage--link--container {
+    margin-bottom: 1rem;
+}
+
+.personnage--link--container a{
+    color: rgba(48, 57, 82, 0.6);
+    text-decoration: none;
+    font-size: 1.4vw;
+}
+
+/*ERROR PAGE */
+
+.error--container {
+    position: relative;
+    min-height: 50vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color:white;
+    box-shadow: rgba(0, 0, 0, 0.10) 0px 3px 10px 0px;
+    transition: all 0.3s ease;
+}
+
+.error--container div{
+    width: 65%;
+    text-align: center;
+    color: black;
+}
+
+.error--container img {
+    width: 40%;
+    height: auto;
+}
+
+.error--container h1 {
+    font-size: 8vw;
+    margin: 10px;
+    color: #303952;
+}
+
+.error--container h2 {
+    font-size: 2vw;
+    margin: 0 auto;
+    color: #303952;
+}
+
+.retour--link--404 {
+    top: 20px;
+    right: 0;
+    margin-right: 25px;
+}
+
+/* MEDIA QUERY */
+
+@media (min-width: 480px) {
+    .info--items--container {
+    flex-basis: 50%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .info--items--container {
+    flex-basis: 33%;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .personnage--description {
+        font-size:2vw;       
+    }
+    .personnage--title .personnage--title--container {
+        max-width: 353px;
+    }
+
+    .personnage--description--container {
+        max-width: 450px;
+    }
+
+    .personnage--link--container {
+        margin-bottom: 2rem;
+    }
+
+    .personnage--link--container a{
+        font-size: 1.6vw;
+    }
+}
+
+@media screen and (max-width: 791px) {
+    .info--container {
+        justify-content: center;
+    }
+    .error--container {
+        flex-direction: column;
+    } 
+    .error--container img {
+        width: 60%;
+    }
+    .error--container h1 {
+        font-size: 9vw;
+    }
+    
+    .error--container h2 {
+        font-size: 3vw;
+    }
+    .personnage--title h2 {
+        font-size: 3vw;
+    }
+    .personnage--title h3 {
+        font-size: 2vw;
+    }
+    .personnage--description {
+        margin: 2rem;
+        font-size: 2.1vw;
+    }
+    .personnage--link--container a {
+        font-size: 1.8vw;
+    }
+}
+
+@media screen and (max-width: 703px) {
+    .content--image img {
+        width : 290px;
+        min-height: 290px;
+    }
+    .content {
+        width: 300px;
+    }
+    #form {
+        width: 100%;
+    }
+    .personnage--title {
+        align-self: center;
+        width: 100%;
+    }
+    .personnage--title .personnage--title--container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .personnage--image {
+        display: none;
+    }
+    .personnage--description {
+        margin: 2rem;
+        font-size: 3vw;
+    }
+    .personnage--link--container a {
+        font-size: 2.1vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .body--page {
+        padding: 1rem;
+    }
+    .body--page {
+        min-height: 85vh;
+    }
+
+    .personnage--title h2 {
+        font-size: 5vw;
+    }
+    .personnage--title h3 {
+        font-size: 3.1vw;
+    }
+    .personnage--image {
+        display: none;
+    }
+    .personnage--link--container a {
+        font-size: 2.4vw;
+    }
+}
